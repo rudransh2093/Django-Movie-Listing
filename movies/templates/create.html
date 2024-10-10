@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Create Movie
+{% endblock %}
+
+{% block content %}
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <style>
+      .create-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #f0f4f8; /* Light grayish-blue background */
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out;
+      }
+      
+      .create-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: #003d34; /* Dark teal color */
+        animation: slideIn 0.5s ease-out;
+      }
+      
+      .create-form {
+        margin-top: 1rem;
+      }
+      
+      .create-form label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+      
+      .create-form input[type='text'],
+      .create-form input[type='number'],
+      .create-form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        background-color: #ffffff; /* White background for fields */
+        animation: fadeInUp 0.5s ease-out;
+      }
+      
+      .create-form input[type='text']:focus,
+      .create-form textarea:focus {
+        border-color: #00796b; /* Teal border on focus */
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 121, 107, 0.3); /* Teal shadow effect on focus */
+      }
+      
+      .create-form button {
+        background-color: #00796b; /* Teal background */
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        animation: fadeInUp 0.5s ease-out 0.3s;
+      }
+      
+      .create-form button:hover {
+        background-color: #004d40; /* Darker teal */
+        transform: translateY(-2px);
+      }
+      
+      .create-form button:active {
+        transform: translateY(1px);
+      }
+      
+    </style>
+  </head>
+
+  <div class="create-container">
+    <h2 class="create-title">Create Movie</h2>
+    <form method="post" enctype="multipart/form-data" action="{% url 'create' %}" class="create-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Create</button>
+    </form>
+  </div>
+{% endblock %}
