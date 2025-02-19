@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+import dj_database_url
 
 from pathlib import Path
 
@@ -74,11 +75,9 @@ WSGI_APPLICATION = '1movies.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/tmp/db.sqlite3',
-    }
+    'default': dj_database_url.config(default="postgresql://postgres.aerkffomdjbghaeigbsf:rudu0508@aws-0-us-west-1.pooler.supabase.com:5432/postgres")
 }
+
 
 
 
