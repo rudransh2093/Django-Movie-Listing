@@ -20,8 +20,11 @@ SECRET_KEY = 'django-insecure-q32*t6sqmw+dg-kr%-e0n#1sbe_!_8yy#+eonak-9zw(f1(e%n
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "django-movie-listing-95valx8uk-rudransh2093s-projects.vercel.app",
+    "127.0.0.1",
+    "localhost",
+]
 
 # Application definition
 
