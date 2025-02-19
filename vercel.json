@@ -1,13 +1,13 @@
 {
-    "builds": [{
+  "builds": [{
       "src": "1movies/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12.4" }
-    }],
-    "routes": [
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.10" }
+  }],
+  "routes": [
       {
-        "src": "/(.*)",
-        "dest": "1movies/wsgi.py"
+          "src": "/(.*)",
+          "dest": "1movies/wsgi.py"
       }
-    ]
+  ]
 }
