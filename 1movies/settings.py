@@ -84,8 +84,8 @@ DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 AWS_ACCESS_KEY_ID = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFlcmtmZm9tZGpiZ2hhZWlnYnNmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk5OTA4MzUsImV4cCI6MjA1NTU2NjgzNX0.WwGoRB5lCr7qf5daeAaYo1QGXAVJ3xS7P2R1XeZ8a2M"
 AWS_SECRET_ACCESS_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFlcmtmZm9tZGpiZ2hhZWlnYnNmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk5OTA4MzUsImV4cCI6MjA1NTU2NjgzNX0.WwGoRB5lCr7qf5daeAaYo1QGXAVJ3xS7P2R1XeZ8a2M"
 AWS_STORAGE_BUCKET_NAME = "movie-images"
-AWS_S3_ENDPOINT_URL = "https://xyz.supabase.co/storage/v1"
-AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.xyz.supabase.co"
+AWS_S3_ENDPOINT_URL = "https://aerkffomdjbghaeigbsf.supabase.co/storage/v1"
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.aerkffomdjbghaeigbsf.supabase.co"
 MEDIA_URL = f"{AWS_S3_CUSTOM_DOMAIN}/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
